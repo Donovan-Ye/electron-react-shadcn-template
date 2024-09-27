@@ -1,0 +1,16 @@
+{
+	"react-template": {
+		"scope": "",
+		"prefix": "rt",
+		"body": [
+			"import type { ReactElement } from 'react'",
+			"\n",
+			"export default function ${1:${TM_FILENAME_BASE}}(): ReactElement {",
+			"\treturn (",
+			"\t\t<> $2 </>",
+			"\t)",
+			"}"
+		],
+		"description": "快速创建react(.tsx)文件的代码模板片段"
+	}
+}
