@@ -1,7 +1,7 @@
+import { Button } from '@/components/ui/button'
 import i18next from 'i18next'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Button } from '@/components/ui/button'
 
 const Home: React.FC = () => {
   const { t } = useTranslation()
@@ -9,9 +9,10 @@ const Home: React.FC = () => {
 
   return (
     <div className="flex flex-col justify-center items-center h-screen">
-      <Button onClick={() => {
-        i18next.changeLanguage(i18next.language === 'zh' ? 'en' : 'zh')
-      }}
+      <Button
+        onClick={() => {
+          i18next.changeLanguage(i18next.language === 'zh' ? 'en' : 'zh')
+        }}
       >
         Toggle Language
       </Button>
