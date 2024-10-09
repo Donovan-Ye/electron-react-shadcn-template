@@ -1,8 +1,8 @@
-import { ipcRenderer } from 'electron'
 import type { ProgressInfo } from 'electron-updater'
-import { useCallback, useEffect, useState } from 'react'
 import Modal from '@/components/update/Modal'
 import Progress from '@/components/update/Progress'
+import { ipcRenderer } from 'electron'
+import { useCallback, useEffect, useState } from 'react'
 import './update.css'
 
 function Update() {
@@ -102,35 +102,35 @@ function Update() {
         <div className="modal-slot">
           {updateError
             ? (
-              <div>
-                <p>Error downloading the latest version.</p>
-                <p>{updateError.message}</p>
-              </div>
+                <div>
+                  <p>Error downloading the latest version.</p>
+                  <p>{updateError.message}</p>
+                </div>
               )
             : updateAvailable
               ? (
-                <div>
                   <div>
-                    The last version is: v
-                    {versionInfo?.newVersion}
-                  </div>
-                  <div className="new-version__target">
-                    v
-                    {versionInfo?.version}
-                    {' '}
-                    -&gt; v
-                    {versionInfo?.newVersion}
-                  </div>
-                  <div className="update__progress">
-                    <div className="progress__title">Update progress:</div>
-                    <div className="progress__bar">
-                      <Progress percent={progressInfo?.percent}></Progress>
+                    <div>
+                      The last version is: v
+                      {versionInfo?.newVersion}
+                    </div>
+                    <div className="new-version__target">
+                      v
+                      {versionInfo?.version}
+                      {' '}
+                      -&gt; v
+                      {versionInfo?.newVersion}
+                    </div>
+                    <div className="update__progress">
+                      <div className="progress__title">Update progress:</div>
+                      <div className="progress__bar">
+                        <Progress percent={progressInfo?.percent}></Progress>
+                      </div>
                     </div>
                   </div>
-                </div>
                 )
               : (
-                <div className="can-not-available">{JSON.stringify(versionInfo ?? {}, null, 2)}</div>
+                  <div className="can-not-available">{JSON.stringify(versionInfo ?? {}, null, 2)}</div>
                 )}
         </div>
       </Modal>

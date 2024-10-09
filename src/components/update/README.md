@@ -39,7 +39,7 @@ npm i electron-updater
 3. ##### Updating UI pages in Electron:
 
    The main function is to provide a UI page for users to trigger the update logic mentioned in (2.) above. Users can click on the page to trigger different update functions in Electron.
-   
+
    For more information, please refer to : [components/update...](https://github.com/electron-vite/electron-vite-react/blob/main/src/components/update/index.tsx)
 
 ---

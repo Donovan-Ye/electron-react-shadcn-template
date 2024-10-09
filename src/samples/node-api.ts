@@ -1,4 +1,5 @@
 import { lstat } from 'node:fs/promises'
+import process from 'node:process'
 import { ipcRenderer } from 'electron'
 
 ipcRenderer.on('main-process-message', (_event, ...args) => {

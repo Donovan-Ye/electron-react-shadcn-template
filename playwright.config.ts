@@ -1,4 +1,5 @@
 import type { PlaywrightTestConfig } from '@playwright/test'
+import process from 'node:process'
 
 /**
  * Read environment variables from file.

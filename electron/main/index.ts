@@ -1,6 +1,7 @@
 import { release } from 'node:os'
 import { join } from 'node:path'
-import { BrowserWindow, app, ipcMain, shell } from 'electron'
+import process from 'node:process'
+import { app, BrowserWindow, ipcMain, shell } from 'electron'
 import { update } from './update'
 
 // The built directory structure

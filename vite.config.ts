@@ -1,7 +1,8 @@
 import { rmSync } from 'node:fs'
 import path from 'node:path'
-import { defineConfig } from 'vite'
+import process from 'node:process'
 import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite'
 import electron from 'vite-plugin-electron'
 import renderer from 'vite-plugin-electron-renderer'
 import pkg from './package.json'
@@ -29,7 +30,7 @@ export default defineConfig(({ command }) => {
           entry: 'electron/main/index.ts',
           onstart(options) {
             if (process.env.VSCODE_DEBUG)
-              // eslint-disable-next-line no-console
+
               console.log(/* For `.vscode/.debug.script.mjs` */'[startup] Electron App')
             else
               options.startup()
