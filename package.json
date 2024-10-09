@@ -1,9 +1,9 @@
 {
-  "name": "name",
+  "name": "electron-react-shadcn-template",
   "version": "0.0.0",
   "private": true,
   "packageManager": "pnpm@9.11.0",
-  "description": "description",
+  "description": "A template for building cross-platform desktop apps with Electron, Vite, React, Shadcn/UI and TypeScript",
   "author": "xxiaozhi <xxiaozhi@gmail.com>",
   "license": "MIT",
   "main": "dist-electron/main/index.js",
