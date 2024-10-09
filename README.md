@@ -11,5 +11,3 @@
 - TailwindCSS: suport atomic css and achieve dark mode based on it
 - unplugin-icons/iconsify: support svg icons
 - @antfu/eslint-config: only use `eslint` for lint
-
-English | [简体中文](README.zh-CN.md)
