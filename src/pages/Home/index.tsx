@@ -1,5 +1,4 @@
 import { Button } from '@/components/ui/button'
-import { getConfigByName, setConfigByName } from '@/lib/config'
 import i18next from 'i18next'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
