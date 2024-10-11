@@ -48,7 +48,6 @@ export default defineConfig(({ command }) => {
           },
         },
         {
-          entry: 'electron/preload/index.ts',
           onstart(options) {
             // Notify the Renderer-Process to reload the page when the Preload-Scripts build is complete,
             // instead of restarting the entire Electron App.
@@ -56,6 +55,12 @@ export default defineConfig(({ command }) => {
           },
           vite: {
             build: {
+              lib: {
+                name: 'index',
+                fileName: 'index',
+                formats: ['cjs'],
+                entry: 'electron/preload/index.ts',
+              },
               sourcemap: sourcemap ? 'inline' : undefined, // #332
               minify: isBuild,
               outDir: 'dist-electron/preload',

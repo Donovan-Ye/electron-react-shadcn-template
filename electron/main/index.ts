@@ -1,5 +1,5 @@
 import { release } from 'node:os'
-import { join } from 'node:path'
+import path, { join } from 'node:path'
 import process from 'node:process'
 import { app, BrowserWindow, ipcMain, shell } from 'electron'
 import { update } from './update'
@@ -14,6 +14,12 @@ import { update } from './update'
 // ├─┬ dist
 // │ └── index.html    > Electron-Renderer
 //
+
+import { fileURLToPath } from 'node:url'
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+
 process.env.DIST_ELECTRON = join(__dirname, '../')
 process.env.DIST = join(process.env.DIST_ELECTRON, '../dist')
 process.env.VITE_PUBLIC = process.env.VITE_DEV_SERVER_URL
@@ -40,7 +46,7 @@ if (!app.requestSingleInstanceLock()) {
 
 let win: BrowserWindow | null = null
 // Here, you can also use other preload
-const preload = join(__dirname, '../preload/index.js')
+const preload = join(__dirname, '../preload/index.cjs')
 const url = process.env.VITE_DEV_SERVER_URL
 const indexHtml = join(process.env.DIST, 'index.html')
 
